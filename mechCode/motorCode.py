@@ -102,11 +102,11 @@ while not joy.Back():
     if joy.A():
         print "A button pressed"
 
-        SetAngle(60)
+        SetAngle(70)
 
     if joy.B():
         print "B button pressed"
-        setAngle(0)
+        pwm.stop()
 
     #if joy.B():
     #    print "B button pressed"
@@ -117,5 +117,4 @@ joy.close()
 print "stopping motors"
 GPIO.output(Motor1E,GPIO.LOW) # to stop the motor
 
-pwm.stop()
 GPIO.cleanup()

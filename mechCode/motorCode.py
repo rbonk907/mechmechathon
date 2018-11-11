@@ -17,8 +17,7 @@ Motor1E = 04
 
 #Motor2E = 04
 
-servo1A = 23
-servo1B = 24
+servo1A = 18
 
 
 GPIO.setup(Motor1A,GPIO.OUT)
@@ -34,7 +33,6 @@ GPIO.setup(Motor1E,GPIO.OUT)
 #GPIO.setup(Motor2E,GPIO.OUT)
 
 GPIO.setup(servo1A,GPIO.OUT)
-GPIO.setup(servo1B,GPIO.OUT)
 
 
 print "Test out your motors"
@@ -92,11 +90,9 @@ while not joy.Back():
     if joy.A():
         print "A button pressed"
         GPIO.output(servo1A,GPIO.HIGH)
-        GPIO.output(servo1B,GPIO.LOW)
         sleep(1)
     if joy.B():
         print "B button pressed"
-        GPIO.output(servo1B,GPIO.HIGH)
         GPIO.output(servo1A,GPIO.LOW)
         sleep(1)
 

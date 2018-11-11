@@ -16,7 +16,7 @@ Motor2A = 02
 Motor2B = 03
 
 Motor2E = 04
-
+git
 
 GPIO.setup(Motor1A,GPIO.OUT)
 
@@ -26,7 +26,7 @@ GPIO.setup(Motor1E,GPIO.OUT)
 
 GPIO.setup(Motor2A,GPIO.OUT)
 
-GPIO.seup(Motor2B,GPIO.OUT)
+GPIO.setup(Motor2B,GPIO.OUT)
 
 GPIO.setup(Motor2E,GPIO.OUT)
 

@@ -40,7 +40,7 @@ def SetAngle(angle):
     duty = angle / 18 + 2
     GPIO.output(servo1A, True)
     pwm.ChangeDutyCycle(duty)
-    sleep(5)
+    sleep(2)
     GPIO.output(servo1A, False)
     pwm.ChangeDutyCycle(0)
 
@@ -104,6 +104,10 @@ while not joy.Back():
 
         SetAngle(60)
 
+    if joy.B():
+        print "B button pressed"
+        setAngle(0)
+
     #if joy.B():
     #    print "B button pressed"
     #    GPIO.output(servo1A,GPIO.LOW)
@@ -113,4 +117,5 @@ joy.close()
 print "stopping motors"
 GPIO.output(Motor1E,GPIO.LOW) # to stop the motor
 
+pwm.stop()
 GPIO.cleanup()

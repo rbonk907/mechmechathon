@@ -38,6 +38,7 @@ joy = xbox.Joystick()   #Initialize joystick
 while not joy.Back():
     y_axis = joy.leftY()
     if joy.leftY() == 1:
+            print "Left Up Pressed"
             GPIO.output(Motor1A,GPIO.HIGH) #clockwise
             GPIO.output(Motor2A,GPIO.HIGH)
             GPIO.output(Motor1B,GPIO.LOW)
@@ -47,6 +48,7 @@ while not joy.Back():
             GPIO.output(Motor2E,GPIO.HIGH)
 
     if joy.leftY() == -1:
+            print "Left Down Pressed"
             GPIO.output(Motor1A,GPIO.LOW) #clockwise
             GPIO.output(Motor2A,GPIO.LOW)
             GPIO.output(Motor1B,GPIO.HIGH)
@@ -58,6 +60,7 @@ while not joy.Back():
     x_axis = joy.rightX()
 
     if joy.rightX() == 1:
+            print "Right right Pressed"
             GPIO.output(Motor1A,GPIO.HIGH) #clockwise
             GPIO.output(Motor2A,GPIO.LOW)
             GPIO.output(Motor1B,GPIO.LOW)
@@ -67,6 +70,7 @@ while not joy.Back():
             GPIO.output(Motor2E,GPIO.HIGH)
 
     if joy.rightX() == -1:
+            print "Right left pressed"
             GPIO.output(Motor1A,GPIO.LOW)
             GPIO.output(Motor2A,GPIO.HIGH) #clockwise
             GPIO.output(Motor1B,GPIO.HIGH) #Anti-clockwise

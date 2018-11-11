@@ -32,7 +32,7 @@ GPIO.setup(Motor2E,GPIO.OUT)
 
 
 print "Test out your motors"
-print joy
+
 #x,y = joy.leftStick()
 while True:
     joy = xbox.Joystick()   #Initialize joystick

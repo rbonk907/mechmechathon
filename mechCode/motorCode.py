@@ -11,11 +11,11 @@ Motor1B = 03
 
 Motor1E = 04
 
-Motor2A = 02
+#Motor2A = 02
 
-Motor2B = 03
+#Motor2B = 03
 
-Motor2E = 04
+#Motor2E = 04
 
 
 GPIO.setup(Motor1A,GPIO.OUT)
@@ -40,42 +40,46 @@ while not joy.Back():
     if joy.leftY() == 1:
             print "Left Up Pressed"
             GPIO.output(Motor1A,GPIO.HIGH) #clockwise
-            GPIO.output(Motor2A,GPIO.HIGH)
+            #GPIO.output(Motor2A,GPIO.HIGH)
             GPIO.output(Motor1B,GPIO.LOW)
-            GPIO.output(Motor2B,GPIO.LOW)
+            #GPIO.output(Motor2B,GPIO.LOW)
 
             GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
-            GPIO.output(Motor2E,GPIO.HIGH)
+            #GPIO.output(Motor2E,GPIO.HIGH)
 
     if joy.leftY() == -1:
             print "Left Down Pressed"
             GPIO.output(Motor1A,GPIO.LOW) #clockwise
-            GPIO.output(Motor2A,GPIO.LOW)
+            #GPIO.output(Motor2A,GPIO.LOW)
             GPIO.output(Motor1B,GPIO.HIGH)
-            GPIO.output(Motor2B,GPIO.HIGH)
+            #GPIO.output(Motor2B,GPIO.HIGH)
 
             GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
-            GPIO.output(Motor2E,GPIO.HIGH)
+            #GPIO.output(Motor2E,GPIO.HIGH)
 
     x_axis = joy.rightX()
 
     if joy.rightX() == 1:
             print "Right right Pressed"
             GPIO.output(Motor1A,GPIO.HIGH) #clockwise
-            GPIO.output(Motor2A,GPIO.LOW)
+            #GPIO.output(Motor2A,GPIO.LOW)
             GPIO.output(Motor1B,GPIO.LOW)
-            GPIO.output(Motor2B,GPIO.HIGH) #Anti-clockwise
+            #GPIO.output(Motor2B,GPIO.HIGH) #Anti-clockwise
 
             GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
-            GPIO.output(Motor2E,GPIO.HIGH)
+            #GPIO.output(Motor2E,GPIO.HIGH)
 
     if joy.rightX() == -1:
             print "Right left pressed"
             GPIO.output(Motor1A,GPIO.LOW)
-            GPIO.output(Motor2A,GPIO.HIGH) #clockwise
+            #GPIO.output(Motor2A,GPIO.HIGH) #clockwise
             GPIO.output(Motor1B,GPIO.HIGH) #Anti-clockwise
-            GPIO.output(Motor2B,GPIO.LOW)
+            #GPIO.output(Motor2B,GPIO.LOW)
 
             GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
-            GPIO.output(Motor2E,GPIO.HIGH)
+            #GPIO.output(Motor2E,GPIO.HIGH)
 joy.close()
+print "stopping motors"
+GPIO.output(Motor1E,GPIO.LOW) # to stop the motor
+
+GPIO.cleanup()

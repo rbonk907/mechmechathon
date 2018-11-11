@@ -34,8 +34,8 @@ GPIO.setup(Motor2E,GPIO.OUT)
 print "Test out your motors"
 
 #x,y = joy.leftStick()
-while True:
-    joy = xbox.Joystick()   #Initialize joystick
+joy = xbox.Joystick()   #Initialize joystick
+while not joy.Back():
     y_axis = joy.leftY()
     if joy.leftY() == 1:
             GPIO.output(Motor1A,GPIO.HIGH) #clockwise
@@ -74,3 +74,4 @@ while True:
 
             GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
             GPIO.output(Motor2E,GPIO.HIGH)
+joy.close()

@@ -24,11 +24,11 @@ GPIO.setup(Motor1B,GPIO.OUT)
 
 GPIO.setup(Motor1E,GPIO.OUT)
 
-GPIO.setup(Motor2A,GPIO.OUT)
+#GPIO.setup(Motor2A,GPIO.OUT)
 
-GPIO.setup(Motor2B,GPIO.OUT)
+#GPIO.setup(Motor2B,GPIO.OUT)
 
-GPIO.setup(Motor2E,GPIO.OUT)
+#GPIO.setup(Motor2E,GPIO.OUT)
 
 
 print "Test out your motors"

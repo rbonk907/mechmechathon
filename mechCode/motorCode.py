@@ -36,7 +36,7 @@ print "Test out your motors"
 
 y_axis = joy.leftY()
 
-if joy.leftY(1)
+if joy.leftY()
     {
         GPIO.output(Motor1A,GPIO.HIGH) #clockwise
         GPIO.output(Motor2A,GPIO.HIGH)
@@ -47,7 +47,7 @@ if joy.leftY(1)
         GPIO.output(Motor2E,GPIO.HIGH)
     }
 
-if joy.leftY(-1)
+if joy.leftY()
     {
         GPIO.output(Motor1A,GPIO.LOW) #clockwise
         GPIO.output(Motor2A,GPIO.LOW)
@@ -60,7 +60,7 @@ if joy.leftY(-1)
 
 x_axis = joy.rightX()
 
-if joy.rightX(1)
+if joy.rightX()
     {
         GPIO.output(Motor1A,GPIO.HIGH) #clockwise
         GPIO.output(Motor2A,GPIO.LOW)
@@ -71,7 +71,7 @@ if joy.rightX(1)
         GPIO.output(Motor2E,GPIO.HIGH)
     }
 
-if joy.rightX(-1)
+if joy.rightX()
     {
         GPIO.output(Motor1A,GPIO.LOW)
         GPIO.output(Motor2A,GPIO.HIGH) #clockwise

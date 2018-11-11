@@ -102,7 +102,7 @@ while not joy.Back():
     if joy.A():
         print "A button pressed"
 
-        SetAngle(180)
+        SetAngle(170)
 
     if joy.B():
         print "B button pressed"

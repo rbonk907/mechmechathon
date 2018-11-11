@@ -33,10 +33,11 @@ GPIO.setup(Motor2E,GPIO.OUT)
 joy = xbox.Joystick()   #Initialize joystick
 
 print "Test out your motors"
-
+print joy
 y_axis = joy.leftY()
+#x,y = joy.leftStick()
 
-if joy.leftY() = 1:
+if joy.leftY() == 1:
         GPIO.output(Motor1A,GPIO.HIGH) #clockwise
         GPIO.output(Motor2A,GPIO.HIGH)
         GPIO.output(Motor1B,GPIO.LOW)
@@ -45,7 +46,7 @@ if joy.leftY() = 1:
         GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
         GPIO.output(Motor2E,GPIO.HIGH)
 
-if joy.leftY() = -1:
+if joy.leftY() == -1:
         GPIO.output(Motor1A,GPIO.LOW) #clockwise
         GPIO.output(Motor2A,GPIO.LOW)
         GPIO.output(Motor1B,GPIO.HIGH)
@@ -56,7 +57,7 @@ if joy.leftY() = -1:
 
 x_axis = joy.rightX()
 
-if joy.rightX() = 1:
+if joy.rightX() == 1:
         GPIO.output(Motor1A,GPIO.HIGH) #clockwise
         GPIO.output(Motor2A,GPIO.LOW)
         GPIO.output(Motor1B,GPIO.LOW)
@@ -65,7 +66,7 @@ if joy.rightX() = 1:
         GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
         GPIO.output(Motor2E,GPIO.HIGH)
 
-if joy.rightX() = -1:
+if joy.rightX() == -1:
         GPIO.output(Motor1A,GPIO.LOW)
         GPIO.output(Motor2A,GPIO.HIGH) #clockwise
         GPIO.output(Motor1B,GPIO.HIGH) #Anti-clockwise

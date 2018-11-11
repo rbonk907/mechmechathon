@@ -16,7 +16,7 @@ Motor2A = 02
 Motor2B = 03
 
 Motor2E = 04
-git
+
 
 GPIO.setup(Motor1A,GPIO.OUT)
 

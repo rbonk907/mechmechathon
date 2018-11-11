@@ -1,0 +1,11 @@
+// Push files to the repository from windows
+// In git bash:
+
+git add -A
+git commit -m "<your message>"
+git push
+
+// Pull files from repository onto the raspberry pi
+// In SSH - make sure you are in the mechmechathon directory
+
+git pull

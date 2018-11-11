@@ -46,6 +46,7 @@ while not joy.Back():
 
             GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
             #GPIO.output(Motor2E,GPIO.HIGH)
+            sleep()
 
     if joy.leftY() == -1:
             print "Left Down Pressed"
@@ -56,6 +57,7 @@ while not joy.Back():
 
             GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
             #GPIO.output(Motor2E,GPIO.HIGH)
+            sleep()
 
     x_axis = joy.rightX()
 
@@ -68,6 +70,7 @@ while not joy.Back():
 
             GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
             #GPIO.output(Motor2E,GPIO.HIGH)
+            sleep()
 
     if joy.rightX() == -1:
             print "Right left pressed"
@@ -78,6 +81,7 @@ while not joy.Back():
 
             GPIO.output(Motor1E,GPIO.HIGH) #Turns motors on
             #GPIO.output(Motor2E,GPIO.HIGH)
+            sleep()
 joy.close()
 print "stopping motors"
 GPIO.output(Motor1E,GPIO.LOW) # to stop the motor

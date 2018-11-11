@@ -33,8 +33,8 @@ GPIO.setup(Motor1E,GPIO.OUT)
 
 #GPIO.setup(Motor2E,GPIO.OUT)
 
-servo1A.setup(servo1A,GPIO.OUT)
-servo1B.setup(servo1B,GPIO.OUT)
+GPIO.setup(servo1A,GPIO.OUT)
+GPIO.setup(servo1B,GPIO.OUT)
 
 
 print "Test out your motors"
@@ -99,7 +99,7 @@ while not joy.Back():
         GPIO.output(servo1B,GPIO.HIGH)
         GPIO.output(servo1A,GPIO.LOW)
         sleep(1)
-        
+
 joy.close()
 print "stopping motors"
 GPIO.output(Motor1E,GPIO.LOW) # to stop the motor
